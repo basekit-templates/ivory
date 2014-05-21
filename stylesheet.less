@@ -1026,12 +1026,12 @@ width: 100%;
         width: 66.5%;
         margin: 1% 0 3.5% 3%;
         display: inline-block;
-        @media @tablet {
+        @media only screen and (max-width: 1285px) {
             background-color: darken(@color-swatch1,5%);
             width: 97%;
             padding: 2em 1em 1em;
         }
-        @media @mobile {
+        @media only screen and (max-width: 912px) {
             margin-left: 0;
             margin-bottom: 20px;
             width: 100%;
@@ -1040,24 +1040,25 @@ width: 100%;
             width: auto;
             margin-right: 1%;
             display: inline-block;
-            @media @tablet {
+            @media only screen and (max-width: 1285px) {
                 width: 29%;
                 margin-right: 3.82%;
             }
-            @media @mobile {
+            @media only screen and (max-width: 912px) {
                 width: 100%;
+                margin-bottom: 20px;
             }
             label[for="productlist-sort"] {
                 display: block;
                 margin-right: 2%;
                 display: inline-block;
-                @media @tablet {
+                @media only screen and (max-width: 1285px) {
                     width: 100%;
                 }
             }
             &:first-child select {
                 width: 71%;
-                @media @tablet {
+                @media only screen and (max-width: 1285px) {
                     width: 100%;
                 }
             }
@@ -1074,19 +1075,19 @@ width: 100%;
         text-align: right;
         display: inline-block;
         margin-left: 0;
-        @media @tablet {
+        @media only screen and (max-width: 1285px) {
             text-align: left;
             width: 100%;
             margin-left: 3%;
         }
-        @media @mobile {
+        @media only screen and (max-width: 912px) {
             margin-left: 0;
         }
     }
     .ecom-productslist-product {
         text-align: center;
         .ecom-productslist-image-wrap {
-            background-color: @color-swatch7;
+            background-color: @color-swatch1;
         }
         .ecom-productlist-info {
             padding-top: 10px;

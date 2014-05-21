@@ -405,17 +405,27 @@ body {
         width: 1100px;
         margin: 0 auto;
     }
-    @media @tablet {
-        padding:20px 0 0;
+}
+
+.widget.feature h2 {
+    span {
+        padding: 20px 5px 0;
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch8-font-size,0.9);
+        line-height: bkscale(@font-swatch8-line-height,0.9);
     }
 }
 
-.widget.feature h2 span {
-    padding-top: 20px;
-}
 
-.widget.feature h3 span {
-    padding-bottom: 20px;
+.widget.feature h3 {
+    span {
+        padding: 10px 5px 20px;
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch9-font-size,0.9);
+        line-height: bkscale(@font-swatch9-line-height,0.9);
+    }
 }
 
 .widget.feature h2 span, .widget.feature h3 span {

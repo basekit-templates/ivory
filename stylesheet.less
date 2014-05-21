@@ -758,7 +758,8 @@ hr.line {
    =============================== */
 
     .widget.contactform fieldset input, .widget.contactform fieldset textarea {
-        border: 1px solid @color-swatch5;
+        border: 1px solid fade(@color-swatch6,10%);
+        background-color: darken(@color-swatch1,2%);
     }
 
    .contactform fieldset {
@@ -771,8 +772,8 @@ hr.line {
    =============================== */
 
    .widget.signupform fieldset input, .widget.profile form fieldset input {
-        border: 1px solid @color-swatch5;
-        background-color: #ffffff;
+        border: 1px solid fade(@color-swatch6,10%);
+        background-color: darken(@color-swatch1,2%);
         margin: 0 5px 5px 0;
         height: 45px;
         @media @tablet {
@@ -972,7 +973,8 @@ width: 100%;
             display: block;
         }
         input {
-            border: 1px solid @color-swatch5;
+            border: 1px solid fade(@color-swatch6,10%);
+            background-color: darken(@color-swatch1,2%);
             height: 42px;
             margin: 0 5px 5px 0;
             width: 40%;

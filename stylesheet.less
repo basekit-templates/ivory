@@ -1041,66 +1041,93 @@ width: 100%;
    =============================== */
 
 .widget.ecomproductslist {
-    .productlist-display-form {
-        width: 66.5%;
-        margin: 1% 0 3.5% 3%;
+    .productlist-filter {
+        margin: 1% 0 2% 3%;
         display: inline-block;
-        @media only screen and (max-width: 1285px) {
-            background-color: darken(@color-swatch1,5%);
-            width: 97%;
-            padding: 2em 1em 1em;
+        width: 100%;
+        @media @mobile {
+            margin: 1% 0;
         }
-        @media only screen and (max-width: 912px) {
-            margin-left: 0;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-        .form-group {
-            width: auto;
-            margin-right: 1%;
-            display: inline-block;
-            @media only screen and (max-width: 1285px) {
-                width: 29%;
-                margin-right: 3.82%;
-            }
-            @media only screen and (max-width: 912px) {
-                width: 100%;
+        .productlist-display-form {
+            @media @mobile {
+                background-color: darken(@color-swatch1,5%);
+                padding: 2em 1em 0;
                 margin-bottom: 20px;
-            }
-            label[for="productlist-sort"] {
-                display: block;
-                margin-right: 2%;
-                display: inline-block;
-                @media only screen and (max-width: 1285px) {
-                    width: 100%;
-                }
-            }
-            &:first-child select {
-                width: 71%;
-                @media only screen and (max-width: 1285px) {
-                    width: 100%;
-                }
-            }
-            label {
-                display: none;
-            }
-            select {
                 width: 100%;
             }
-        }
-    }
-    .productlist-item-count {
-        width: 30%;
-        text-align: right;
-        display: inline-block;
-        margin-left: 0;
-        @media only screen and (max-width: 1285px) {
-            text-align: left;
-            width: 100%;
-            margin-left: 3%;
-        }
-        @media only screen and (max-width: 912px) {
-            margin-left: 0;
+            .form-group {
+                display: inline-block;
+                @media @mobile {
+                    width: 100%;
+                }
+                label[for="productlist-sort"] {
+                    display: inline-block;
+                    @media @tablet {
+                        width: 100%;
+                    }
+                }
+                label[for="productlist-categories"], label[for="productlist-tags"] {
+                    display: none;
+                }
+                select[name="displayCount"] {
+                    width: auto;
+                    @media @mobile {
+                        width: 100%;
+                        margin-bottom: 0;
+                    }
+                }
+                select {
+                    -moz-appearance: none;
+                    text-indent: 0.01px;
+                    text-overflow: '';
+                    background-position: right 12px center;
+                    background-position-x: 93%;
+                    background-position-y: 55%;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    -webkit-border-radius: 0;
+                    position: relative;
+                    background-image: image('/images/arrow-down.png');
+                    background-repeat: no-repeat;
+                    background-position: right 12px center;
+                    margin-bottom: 12px;
+                    padding: 8px 33px 8px 8px;
+                    border: 1px solid darken(@color-swatch1,8%);
+                    background-color: @color-swatch2;
+                    color: @color-swatch5;
+                    height: 35px;
+                    width: 100%;
+                    @media @mobile {
+                        width: 100%;
+                        height: 45px;
+                        border: 1px solid darken(@color-swatch1,8%);
+                    }
+                }
+                select::-ms-expand {
+                    display: none;
+                }
+                &.productlist-search {
+                    input {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -webkit-border-radius: 0;
+                        height: 35px;
+                        border: 1px solid darken(@color-swatch1,8%);
+                        @media @mobile {
+                            width: 100%;
+                            margin-bottom: 5px;
+                            height: 45px;
+                            border: 1px solid darken(@color-swatch1,8%);
+                        }
+                    }
+                    .btn {
+                        padding: 5px 10px;
+                        @media @mobile {
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
     .ecom-productslist-product {
@@ -1129,64 +1156,52 @@ width: 100%;
 }
 
 /* ===============================
-  Ecommerce Featured Products Widget
+  ECOM - FEATURED PRODUCTS
    =============================== */
 
-.widget {
-    &.ecomfeaturedproducts {
-        .ecom-featuredproducts-wrap {
-            .ecom-featuredproducts-header h2 {
-                text-align: center;
-                padding: 1em 0 1.5em;
-                font-family: @font-swatch1-font-family;
-                font-size: @font-swatch1-font-size;
-                font-weight: @font-swatch1-font-weight;
-                line-height: @font-swatch1-line-height;
-                color: @font-swatch1-color;
+.widget.ecomfeaturedproducts {
+    text-align: center;
+    .ecom-featuredproducts-header {
+        width: 97%;
+        padding: 2em 0;
+    }
+    .ecom-featuredproducts-wrap.products-1 .ecom-featuredproducts-product {
+        width: 97%;
+    }
+    .ecom-featuredproducts-wrap .ecom-featuredproducts-product {
+        .ecom-featuredproducts-image-wrap {
+            background-color: @color-swatch2;
+            border: 2em solid @color-swatch2;
+            margin-bottom: 20px;
+            height: 300px;
+            @media @mobile {
+                height: 250px;
             }
-            .ecom-featuredproducts-product {
-                background-color: darken(@color-swatch2,2%);
-                margin: 1em 0;
-                padding: 2em;
-                display: inline-block;
-                width: 100%;
-                .ecom-featuredproducts-image-wrap {
-                    background-color: darken(@color-swatch2,2%);
-                    width: 55%;
-                    height: 250px;
-                    background-position:top center;
-                    background-repeat:no-repeat;
-                    -webkit-background-size: contain;
-                    -moz-background-size: contain;
-                    -o-background-size: contain;
-                    background-size: contain;
-                    overflow: hidden;
-                    float: left;
-                    @media @mobile {
-                        width: 100%;
-                        margin-bottom: 1em;
-                        background-position: center;
-                    }
-                }
-                .ecom-featuredproducts-image {
-                    display: none;
-                }
+        }
+        .ecom-featuredproducts-info {
+            .ecom-featuredproducts-title {
+                font-family: @font-swatch5-font-family;
+                font-size: @font-swatch5-font-size;
+                font-weight: @font-swatch5-font-weight;
+                line-height: @font-swatch5-line-height;
+                letter-spacing: @font-swatch5-letter-spacing;
+                padding: 0;
             }
-            .ecom-featuredproducts-info {
-                width: 41%;
-                display: inline-block;
-                margin-left: 4%;
-                .ecom-featuredproducts-title a {
-                    font-size: bkscale(@font-swatch2-font-size,0.8);
-                    line-height: bkscale(@font-swatch2-line-height,0.8);
-                }
-                @media @mobile {
-                    width: 100%;
-                }
+            .ecom-featuredproducts-price {
+                color: @color-swatch3;
+                font-weight: 700;
+                font-size: bkscale(@font-swatch5-font-size,1.1);
             }
         }
     }
 }
+
+.ecom-featuredproducts-product {
+    .ecom-featuredproducts-image-wrap {
+        background-color: @color-swatch2;
+    }
+}
+
 
 /* ===============================
   ECOM CATEGORIES LIST

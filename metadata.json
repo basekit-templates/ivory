@@ -2,7 +2,7 @@
 	"name":"Ivory",
 	"thumbnail":"ivory.png",
 	"screenshot":"ivory.png",
-    "pageTypes": ["default", "home", "menu"],
+    
     "templateType":"menu",
     "tags": {
     "en": ["clean", "menu", "cafe", "bar", "restaurant"],

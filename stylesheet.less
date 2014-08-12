@@ -1902,7 +1902,6 @@ width: 100%;
                     right: 20px;
                     display: block;
                     top: 10px;
-                    height: 30px;
                     line-height: 30px;
                     text-align: center;
                     font-size: bkscale(@font-swatch5-font-size, 0.8);
@@ -1917,10 +1916,8 @@ width: 100%;
                 .basket-summary-quantitybtn {
                     background-color: transparent;
                     margin: 0;
-                    position: absolute;
+                    position: relative;
                     width: 150px;
-                    right: 20px;
-                    top: 40px;
                     height: 40px;
                     @media @bp-checkout-compact {
                         position: relative;
@@ -1939,8 +1936,6 @@ width: 100%;
                         border: none;
                         cursor: pointer;
                         padding: 0;
-                        color: @color-swatch1;
-                        background-color: @color-swatch3;
                         position: absolute;
                         top: 0;
                         width: 40px;
@@ -1953,9 +1948,7 @@ width: 100%;
                             line-height: 30px;
                         }
 
-                        &:hover {
-                            background-color: @font-swatch7-background-color-hover;
-                        }
+                      
 
                         &.js-remove {
                             left: 0;

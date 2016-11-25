@@ -876,7 +876,9 @@ hr.line {
   CONTACT FORM
    =============================== */
 
-    .widget.contactform fieldset input, .widget.contactform fieldset textarea {
+    .widget.contactform fieldset input, .widget.contactform fieldset textarea,
+    .advancedcontactform input,
+    .advancedcontactform textarea {
         border: 1px solid fade(@color-swatch6,10%);
         background-color: darken(@color-swatch1,2%);
     }
@@ -886,6 +888,32 @@ hr.line {
         margin: 0 0 10px;
         padding: 0;
     }
+
+/* ===============================
+  ADVANCED CONTACT FORM
+   =============================== */
+
+// Advanced Contact Form
+.advancedcontactform {
+    .label {
+        margin-bottom: 10px;
+    }
+    .input {
+        width: 100%;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    select {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
 /* ===============================
   SIGN UP FORM & PROFILE FORM
    =============================== */
